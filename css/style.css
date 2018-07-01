@@ -39,7 +39,8 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%) /**/
+    transform: translate(-50%,-50%); /**/
+    text-align: center;
 }
 .logo {
     height: 35px;
@@ -49,6 +50,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 .heading-primary-main{
    display: block;
@@ -72,6 +74,7 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
     animation: moveInRight 1s ease-out;
+    
     /*
 
     animation-name: moveInRight;
@@ -106,4 +109,65 @@ body {
         opacity: 1;
         transform: translate(0);
     }/*Final state*/
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }/*Initial state*/
+   
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }/*Final state*/
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;    /*15 top & Bottom 40 left & right*/
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+
+}/*link is the pseudo class
+visited state- doesnt turn text to blue after visiting the link*/
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0,0, .2);
+
+}
+.btn:active{
+    transform: translateY(-1px);
+}
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btn-white::after{
+    background-color: #fff;
+}
+.btn:hover::after{
+    transform: scalex(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
