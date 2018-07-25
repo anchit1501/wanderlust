@@ -1,0 +1,22 @@
+{
+  "name": "wanderlust",
+  "version": "1.0.0",
+  "description": "Travel Website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anchit1501/Natours.git"
+  },
+  "author": "Anchit1501",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anchit1501/Natours/issues"
+  },
+  "homepage": "https://github.com/anchit1501/Natours#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
