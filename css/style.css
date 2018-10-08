@@ -1,3 +1,41 @@
+/*
+0-600px     Phone
+600-900px   Tablet(portrait)
+900-1200px    Tablet(landscape)
+1200-1800px   Normal Styes
+1800+       Big Desktop
+
+Breakpoint argument choices:
+-mobile
+-tab-land
+-tab-port
+-big-desktop
+
+1em: 16px
+37.5em : 600px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
