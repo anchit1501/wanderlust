@@ -88,4 +88,52 @@
             color: $color-primary;
         }
     }
+
+    @include respond(tab-port){
+        .popup {
+           
+        
+     
+    
+        &__left {
+            width: 100%;
+            display: table-footer-group;
+            padding: 0;
+            margin: 0;
+        }
+    
+        &__right {
+            width: 100%;
+            vertical-align: middle;
+            padding: 1rem 2rem;
+        }
+    
+        &__img {
+            display: inline-block;
+            width: 50%;
+            height: auto;
+        }
+    
+        &__text {
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
+    
+            -moz-column-count: 1;
+            -moz-column-gap: 4rem; //1em = 14px;
+            -moz-column-rule: 1px solid $color-grey-light-2;
+    
+            column-count: 1;
+            column-gap: 4rem; //1em = 14px;
+            column-rule: 1px solid $color-grey-light-2;
+    
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+    
+      
+        
+    }
+}
 }
