@@ -11,7 +11,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);    /*clippy*/
     
-    @media (min-resolution: 192dpi) and (max-width:37.5em),
+    @media only screen and (min-resolution: 192dpi) and (max-width:37.5em),
     (min-width:125em){
         background-image: linear-gradient(to right bottom, 
         rgba($color-secondary-light, 0.8),
